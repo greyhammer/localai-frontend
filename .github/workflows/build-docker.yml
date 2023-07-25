@@ -19,7 +19,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '16.x'
-      working-directory: /localai-frontend
 
     # - name: npm install
     #   run: npm install
