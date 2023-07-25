@@ -13,9 +13,8 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: go-skynet/LocalAI-frontend
-        path: localai-frontend
 
-    - name: npm install
+    - name: setup node
       uses: actions/setup-node@v3
       with:
         node-version: '16.x'
