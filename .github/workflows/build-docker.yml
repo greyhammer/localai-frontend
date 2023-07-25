@@ -19,10 +19,6 @@ jobs:
       with:
         node-version: '16.x'
 
-    # - name: npm install
-    #   run: npm install
-    #   working-directory: /localai-frontend
-
-    - name: list dir
-      run: ls -la
+    - name: npm install
+      run: npm install
       working-directory: /home/runner/work/localai-frontend/localai-frontend
