@@ -1,0 +1,26 @@
+name: 'Docker Image CI'
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+
+    - name: clone repo
+      uses: actions/checkout@v2
+      with:
+        repository: go-skynet/LocalAI-frontend
+        path: /localai-frontend
+
+    - name: npm install
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16.x'
+      working-directory: /localai-frontend
+
+    - name: list dir
+      run: ls -la
+      working-directory: /localai-frontend
