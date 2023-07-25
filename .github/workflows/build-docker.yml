@@ -14,11 +14,18 @@ jobs:
       with:
         repository: go-skynet/LocalAI-frontend
 
-    - name: setup node
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16.x'
+    - name: copy files
+      run: mv /home/runner/work/localai-frontend/localai-frontend /
 
-    - name: npm install
-      run: npm install
-      working-directory: /home/runner/work/localai-frontend/localai-frontend
+    - name: ls dir
+      run: ls -la
+      working-directory: /localai-frontend
+
+    # - name: setup node
+    #   uses: actions/setup-node@v3
+    #   with:
+    #     node-version: '16.x'
+
+    # - name: npm install
+    #   run: npm install
+    #   working-directory: /home/runner/work/localai-frontend/localai-frontend
